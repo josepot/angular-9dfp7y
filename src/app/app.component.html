@@ -1,0 +1,18 @@
+<label>
+  <input type="checkbox" [(ngModel)]="isShowingSync" />
+  Sync
+</label>
+<label>
+  <input type="checkbox" [(ngModel)]="isShowingAsyncSingle" />
+  Async single
+</label>
+<label>
+  <input type="checkbox" [(ngModel)]="isShowingAsyncContinuous" />
+  Async continuous
+</label>
+
+<my-sync *ngIf="isShowingSync" class="box sync"></my-sync>
+
+<my-async-single *ngIf="isShowingAsyncSingle" class="box async-single"></my-async-single>
+
+<my-async-continuous *ngIf="isShowingAsyncContinuous" class="box async-continuous"></my-async-continuous>
